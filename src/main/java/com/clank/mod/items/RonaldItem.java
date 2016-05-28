@@ -7,9 +7,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class RonaldItem extends Item {
-	
-	public RonaldItem(){
+public class RonaldItem extends Item
+{
+
+	public RonaldItem()
+	{
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("ronaldgun");
 		this.setCreativeTab(CreativeTabs.tabMisc);

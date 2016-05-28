@@ -16,22 +16,25 @@ import com.clank.mod.init.ItemInit;
 @Mod(modid = CMP.MODID, version = CMP.VERSION)
 public class CMP
 {
-    public static final String MODID = "ClankMod";
-    public static final String VERSION = "1.0";
-    
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event){
-    }
-    @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
-    	BlockInit.init();
-    	ItemInit.init();
-    	EventInit.init();
-    	
-    }
-    @EventHandler
-    public void postInit(FMLPostInitializationEvent event)
-    {
-    }
+	public static final String MODID = "CMP";
+	public static final String VERSION = "1.0";
+
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event)
+	{
+	}
+
+	@EventHandler
+	public void init(FMLInitializationEvent event)
+	{
+		BlockInit.init();
+		ItemInit.init();
+		EventInit.init();
+
+	}
+
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event)
+	{
+	}
 }
