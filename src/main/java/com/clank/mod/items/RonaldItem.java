@@ -15,5 +15,6 @@ public class RonaldItem extends Item
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("ronaldgun");
 		this.setCreativeTab(CreativeTabs.tabMisc);
+		
 	}
 }

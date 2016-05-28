@@ -19,7 +19,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ClientProxy extends CommonProxy
 {
 	@SideOnly(Side.CLIENT)
-	private static void register(Item item, String customName)
+	public static void register(Item item, String customName)
 	{
 		int meta = 0;
 
@@ -27,7 +27,7 @@ public class ClientProxy extends CommonProxy
 		item.getSubItems(item, CreativeTabs.tabMisc, subItems);
 		for (ItemStack sub : subItems)
 		{
-			String name = item.getUnlocalizedName(sub).substring(CMP.MODID.length() + 5).toLowerCase();
+			String name = item.getUnlocalizedName(sub).substring(5).toLowerCase();
 			ModelBakery.registerItemVariants(item, new ResourceLocation(CMP.MODID.toLowerCase(), name));
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(CMP.MODID.toLowerCase() + ":" + name, "inventory"));
 			meta++;

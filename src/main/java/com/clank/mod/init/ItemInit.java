@@ -19,6 +19,6 @@ public class ItemInit
 		GameRegistry.registerItem(ronaldItem, "RonaldItem");
 
 		// Item Recipes
-		GameRegistry.addShapelessRecipe(new ItemStack(ronaldItem, 1), new ItemStack(Items.dye, 1, 1), new ItemStack(Items.name_tag));
+		GameRegistry.addShapelessRecipe(new ItemStack(ronaldItem, 1), new ItemStack(Items.dye, 1, 1), new ItemStack(Items.name_tag), new ItemStack(Items.nether_star));
 	}
 }

@@ -5,9 +5,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import com.clank.mod.client.ClientProxy;
 import com.clank.mod.events.RonaldGunEvent;
 import com.clank.mod.init.BlockInit;
 import com.clank.mod.init.EventInit;
@@ -36,5 +38,8 @@ public class CMP
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
+		if(event.getSide().isClient())
+			ClientProxy.register(ItemInit.ronaldItem, "");
+		
 	}
 }
